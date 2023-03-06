@@ -1,0 +1,330 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+# Date created = 22:25:09  November 19, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		MIPS_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSXFC6D6F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY MIPS_UART
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:25:09  NOVEMBER 19, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AH18 -to HEX0[6]
+set_location_assignment PIN_AG18 -to HEX0[5]
+set_location_assignment PIN_AH17 -to HEX0[4]
+set_location_assignment PIN_AG16 -to HEX0[3]
+set_location_assignment PIN_AG17 -to HEX0[2]
+set_location_assignment PIN_V18 -to HEX0[1]
+set_location_assignment PIN_W17 -to HEX0[0]
+set_location_assignment PIN_W16 -to HEX2[6]
+set_location_assignment PIN_AF18 -to HEX2[5]
+set_location_assignment PIN_Y18 -to HEX2[4]
+set_location_assignment PIN_Y17 -to HEX2[3]
+set_location_assignment PIN_AA18 -to HEX2[2]
+set_location_assignment PIN_AB17 -to HEX2[1]
+set_location_assignment PIN_AA21 -to HEX2[0]
+set_location_assignment PIN_AD20 -to HEX3[6]
+set_location_assignment PIN_AA19 -to HEX3[5]
+set_location_assignment PIN_AC20 -to HEX3[4]
+set_location_assignment PIN_AA20 -to HEX3[3]
+set_location_assignment PIN_AD19 -to HEX3[2]
+set_location_assignment PIN_W19 -to HEX3[1]
+set_location_assignment PIN_Y19 -to HEX3[0]
+set_location_assignment PIN_AB22 -to Rx_SR[8]
+set_location_assignment PIN_AF24 -to Rx_SR[7]
+set_location_assignment PIN_AE24 -to Rx_SR[6]
+set_location_assignment PIN_AF25 -to Rx_SR[5]
+set_location_assignment PIN_AG25 -to Rx_SR[4]
+set_location_assignment PIN_AD24 -to Rx_SR[3]
+set_location_assignment PIN_AC23 -to Rx_SR[2]
+set_location_assignment PIN_AF14 -to clock
+set_location_assignment PIN_AC22 -to heard_bit_out
+set_location_assignment PIN_AB21 -to parity
+set_location_assignment PIN_AB30 -to reset
+set_location_assignment PIN_AK2 -to rx
+set_location_assignment PIN_Y16 -to tx
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clock -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=32768" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=32768" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_location_assignment PIN_AB23 -to Rx_SR[1]
+set_location_assignment PIN_AA24 -to Rx_SR[0]
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "MIPS:MIPS_UUT|Message[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "MIPS:MIPS_UUT|Message[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "MIPS:MIPS_UUT|Message[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "MIPS:MIPS_UUT|Message[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "MIPS:MIPS_UUT|Message[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "MIPS:MIPS_UUT|Message[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "MIPS:MIPS_UUT|Message[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "MIPS:MIPS_UUT|Message[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|rst" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S0_FETCH" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S10_ADDI_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S11_ANDI_EXECUTE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S12_ANDI_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S13_POUT_MEM_ADDR" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S14_POUT_MEM_WRITE_BACK_RXSEND" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S15_POUT_MEM_READ" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S1_DECODE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S2_MEM_ADDR" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S3_MEM_READ" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S4_MEM_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S5_MEM_WRITE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S6_EXECUTE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S7_ALU_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S9_ADDI_EXECUTE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Bit_index[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Bit_index[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Bit_index[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.000" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_ADD_BIT_INDEX" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_DONE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_DATA_BIT_PROCESSING" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_PARITY_BIT" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_START_BIT" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_STOP_BIT" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "UART_TxRx:UART|sendTx" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "UART_TxRx:UART|tx" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to reset -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "MIPS:MIPS_UUT|Message[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "MIPS:MIPS_UUT|Message[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "MIPS:MIPS_UUT|Message[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "MIPS:MIPS_UUT|Message[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "MIPS:MIPS_UUT|Message[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "MIPS:MIPS_UUT|Message[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "MIPS:MIPS_UUT|Message[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "MIPS:MIPS_UUT|Message[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|rst" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S0_FETCH" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S10_ADDI_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S11_ANDI_EXECUTE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S12_ANDI_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S13_POUT_MEM_ADDR" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S14_POUT_MEM_WRITE_BACK_RXSEND" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S15_POUT_MEM_READ" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S1_DECODE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S2_MEM_ADDR" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S3_MEM_READ" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S4_MEM_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S5_MEM_WRITE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S6_EXECUTE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S7_ALU_WRITE_BACK" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state.S9_ADDI_EXECUTE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "MIPS:MIPS_UUT|programCounter:programCounter_TOP|Q[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Bit_index[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Bit_index[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Bit_index[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.000" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_ADD_BIT_INDEX" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_DONE" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_DATA_BIT_PROCESSING" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_PARITY_BIT" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_START_BIT" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state.s_TX_STOP_BIT" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "UART_TxRx:UART|sendTx" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "UART_TxRx:UART|tx" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to reset -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=69" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=69" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=69" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=236" -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE ../sources/UART_TxRx.v
+set_global_assignment -name VERILOG_FILE ../sources/UART_Tx.v
+set_global_assignment -name VERILOG_FILE ../sources/UART_Rx.v
+set_global_assignment -name VERILOG_FILE ../sources/Shift_Register_R_Param_Rx.v
+set_global_assignment -name VERILOG_FILE ../sources/Shift_Register_R_Param.v
+set_global_assignment -name VERILOG_FILE ../sources/Reg_Param.v
+set_global_assignment -name VERILOG_FILE ../sources/parity.v
+set_global_assignment -name VERILOG_FILE ../sources/Mux_Tx.v
+set_global_assignment -name VERILOG_FILE ../sources/Heard_Bit.v
+set_global_assignment -name VERILOG_FILE ../sources/FSM_UART_Tx.v
+set_global_assignment -name VERILOG_FILE ../sources/FSM_UART_Rx.v
+set_global_assignment -name VERILOG_FILE ../sources/FF_D_enable.v
+set_global_assignment -name VERILOG_FILE ../sources/decoder_bin_hex_7seg.v
+set_global_assignment -name VERILOG_FILE ../sources/Counter_Param.v
+set_global_assignment -name VERILOG_FILE ../sources/Bit_Rate_Pulse.v
+set_global_assignment -name VERILOG_FILE ../sources/ascii_2_7_seg.v
+set_global_assignment -name VERILOG_FILE ../sources/controlUnit.v
+set_global_assignment -name VERILOG_FILE ../sources/signExtend.v
+set_global_assignment -name VERILOG_FILE ../sources/Mux_4in_1out.v
+set_global_assignment -name VERILOG_FILE ../sources/RegisterFile.v
+set_global_assignment -name VERILOG_FILE ../sources/register.v
+set_global_assignment -name VERILOG_FILE ../sources/programCounter.v
+set_global_assignment -name VERILOG_FILE ../sources/Mux_2in_1out.v
+set_global_assignment -name VERILOG_FILE ../sources/MIPS.v
+set_global_assignment -name VERILOG_FILE ../sources/InstructionData_Memory.v
+set_global_assignment -name VERILOG_FILE ../sources/ALU.v
+set_global_assignment -name VERILOG_FILE ../sources/zeroExtend.v
+set_global_assignment -name TEXT_FILE ../sources/Instruction_set.txt
+set_global_assignment -name VERILOG_FILE ../sources/MIPS_tb.v
+set_global_assignment -name TEXT_FILE ../sources/Data.txt
+set_global_assignment -name VERILOG_FILE ../sources/ALU_TB.v
+set_global_assignment -name VERILOG_FILE ../sources/Mux_2in_1out_TB.v
+set_global_assignment -name VERILOG_FILE ../sources/Mux_4in_1out_TB.v
+set_global_assignment -name VERILOG_FILE ../sources/MIPS_UART.v
+set_global_assignment -name VERILOG_FILE ../sources/MIPS_UART_TB.v
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name QIP_FILE PLL_100MHz.qip
+set_global_assignment -name SIP_FILE PLL_100MHz.sip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

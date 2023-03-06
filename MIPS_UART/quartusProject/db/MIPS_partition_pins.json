@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "parity",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_SR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "heard_bit_out",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

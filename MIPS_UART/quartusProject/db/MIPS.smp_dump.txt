@@ -1,0 +1,38 @@
+
+State Machine - |MIPS_UART|UART_TxRx:UART|UART_Tx:UART_Tx_TOP|FSM_UART_Tx:FSM_UART_Tx_TOP|Tx_state
+Name Tx_state.s_DONE Tx_state.s_TX_STOP_BIT Tx_state.s_TX_PARITY_BIT Tx_state.s_ADD_BIT_INDEX Tx_state.s_TX_DATA_BIT_PROCESSING Tx_state.s_TX_START_BIT Tx_state.000 
+Tx_state.000 0 0 0 0 0 0 0 
+Tx_state.s_TX_START_BIT 0 0 0 0 0 1 1 
+Tx_state.s_TX_DATA_BIT_PROCESSING 0 0 0 0 1 0 1 
+Tx_state.s_ADD_BIT_INDEX 0 0 0 1 0 0 1 
+Tx_state.s_TX_PARITY_BIT 0 0 1 0 0 0 1 
+Tx_state.s_TX_STOP_BIT 0 1 0 0 0 0 1 
+Tx_state.s_DONE 1 0 0 0 0 0 1 
+
+State Machine - |MIPS_UART|UART_TxRx:UART|UART_Rx:UART_Rx_TOP|FSM_UART_Rx:FSM_Rx|Rx_state
+Name Rx_state.SAVE_RX_DATA_S Rx_state.STOP_S Rx_state.RX_WAIT_S Rx_state.SAMPLE_S Rx_state.RX_BITS_S Rx_state.START_S Rx_state.INI_S 
+Rx_state.INI_S 0 0 0 0 0 0 0 
+Rx_state.START_S 0 0 0 0 0 1 1 
+Rx_state.RX_BITS_S 0 0 0 0 1 0 1 
+Rx_state.SAMPLE_S 0 0 0 1 0 0 1 
+Rx_state.RX_WAIT_S 0 0 1 0 0 0 1 
+Rx_state.STOP_S 0 1 0 0 0 0 1 
+Rx_state.SAVE_RX_DATA_S 1 0 0 0 0 0 1 
+
+State Machine - |MIPS_UART|MIPS:MIPS_UUT|controlUnit:controlUnit_TOP|state
+Name state.S15_POUT_MEM_READ state.S14_POUT_MEM_WRITE_BACK_RXSEND state.S13_POUT_MEM_ADDR state.S12_ANDI_WRITE_BACK state.S11_ANDI_EXECUTE state.S10_ADDI_WRITE_BACK state.S9_ADDI_EXECUTE state.S7_ALU_WRITE_BACK state.S6_EXECUTE state.S5_MEM_WRITE state.S4_MEM_WRITE_BACK state.S3_MEM_READ state.S2_MEM_ADDR state.S1_DECODE state.S0_FETCH 
+state.S0_FETCH 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.S1_DECODE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.S2_MEM_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.S3_MEM_READ 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.S4_MEM_WRITE_BACK 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.S5_MEM_WRITE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.S6_EXECUTE 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.S7_ALU_WRITE_BACK 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.S9_ADDI_EXECUTE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.S10_ADDI_WRITE_BACK 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.S11_ANDI_EXECUTE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.S12_ANDI_WRITE_BACK 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.S13_POUT_MEM_ADDR 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S14_POUT_MEM_WRITE_BACK_RXSEND 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S15_POUT_MEM_READ 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

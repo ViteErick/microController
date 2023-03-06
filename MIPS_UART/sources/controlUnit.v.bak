@@ -1,0 +1,283 @@
+module controlUnit (
+    input clk, rst,
+    input [5:0]opCode,
+    //Multiplexer Selects
+    output reg MemtoReg,
+    output reg RegDst,
+    output reg IorD,
+    output reg PCSrc,
+    output reg [1:0] ALUSrcB,
+    output reg ALUSrcA,
+    //Register Enables
+    output reg IRWrite,
+    output reg MemWrite,
+    output reg PCWrite,
+    output reg RegWrite,
+    //To ALU Decoder
+    input [5:0]funct,
+    // input [1:0]ALUOp,               //??
+    output reg [2:0]ALUControl
+    output reg [1:0] ALUOp          //??
+    );
+
+    wire [1:0]ALUOp_w;
+
+reg [2:0] state;
+
+localparam S0_FETCH    = 3'b000;
+localparam S1_DECODE   = 3'b001;
+localparam S2_MEM_ADDR = 3'b010;
+localparam S3_MEM_READ = 3'b011;
+localparam S4_MEM_WRITE_BACK = 3'b100;
+localparam S5_MEM_WRITE = 3'b101;
+localparam S6_EXECUTE   = 3'b110;
+localparam S7_ALU_WRITE_BACK = 3'b111;
+
+//ALU Decoder
+localparam ADD_FN  = 6'b10_0000;
+localparam SUB_FN  = 6'b10_0010;
+localparam AND_FN  = 6'b10_0100;
+localparam OR_FN   = 6'b10_0101;
+localparam SLT_FN  = 6'b10_1010;
+reg [2:0] ALUFunctions_o;
+
+localparam LW = 6'h23;
+localparam SW = 6'h2b;
+localparam R_Type = 6'h00;
+
+always @(posedge rst, posedge clk)
+	begin
+		if (rst) 
+			state <= S0_FETCH;
+		else 
+		case (state)
+            S0_FETCH:
+                state <= S1_DECODE;
+            S1_DECODE:
+                if(opCode == LW | opCode == SW)       //Pseudocode if(opCode == LW or SW) 
+                    state <= S2_MEM_ADDR;
+                else
+                    if(opCode == R_Type)    //Pseudocode 
+                        state <= S6_EXECUTE;
+            S2_MEM_ADDR:
+                if(opCode == LW)            //Pseudocode 
+                    state <= S3_MEM_READ;
+                else
+                    if(opCode == SW)        //Pseudocode 
+                        state <= S5_MEM_WRITE;
+            S3_MEM_READ:
+                state <= S4_MEM_WRITE_BACK;
+            S4_MEM_WRITE_BACK:
+                state <= S0_FETCH;
+            S5_MEM_WRITE:
+                state <= S0_FETCH;
+            S6_EXECUTE:
+                state <= S7_ALU_WRITE_BACK;
+            S7_ALU_WRITE_BACK:
+                state <= S0_FETCH;
+            default:
+                state <= S0_FETCH;
+		endcase
+	end
+
+always @(state)
+	begin
+        case(state)
+				S0_FETCH: 	
+					begin
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b0;     //Appear as X
+                        RegDst      = 1'b0;     //Appear as X
+                        IorD        = 1'b0;     //change 0
+                        PCSrc       = 1'b0;     //change 0
+                        ALUSrcB     = 2'b01;    //change 01
+                        ALUSrcA     = 1'b0;     //change 0
+                        //Register Enables
+                        IRWrite     = 1'b1;     //change 1
+                        MemWrite    = 1'b0;
+                        PCWrite     = 1'b1;     //change 1
+                        RegWrite    = 1'b0;
+                        //To ALU Decoder
+                        ALUOp       = 2'b00;    //change 00
+                    end
+                S1_DECODE:
+                    begin
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b0;     //X
+                        RegDst      = 1'b0;     //X
+                        IorD        = 1'b0;     //X
+                        PCSrc       = 1'b0;     //X
+                        ALUSrcB     = 2'b00;    //XX
+                        ALUSrcA     = 1'b0;     //X
+                        //Register Enables
+                        IRWrite     = 1'b0;     //0
+                        MemWrite    = 1'b0;     //0
+                        PCWrite     = 1'b0;     //0
+                        RegWrite    = 1'b0;     //0
+                        //To ALU Decoder
+                        ALUOp       = 2'b00;    //??
+                    end
+                S2_MEM_ADDR: //Data flow during memory address computation
+                    begin
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b0;      //X
+                        RegDst      = 1'b0;      //X
+                        IorD        = 1'b0;      //X
+                        PCSrc       = 1'b0;      //X
+                        ALUSrcB     = 2'b10;     //10
+                        ALUSrcA     = 1'b1;      //1
+                        //Register Enables
+                        IRWrite     = 1'b0;      //0
+                        MemWrite    = 1'b0;      //0
+                        PCWrite     = 1'b0;      //0
+                        RegWrite    = 1'b0;      //0
+                        //To ALU Decoder
+                        ALUOp       = 2'b00;     //00
+                    end
+                S3_MEM_READ:
+                    begin  
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b0;      //
+                        RegDst      = 1'b0;      //
+                        IorD        = 1'b1;      //1
+                        PCSrc       = 1'b0;      //
+                        ALUSrcB     = 2'b00;     //
+                        ALUSrcA     = 1'b0;      //
+                        //Register Enables
+                        IRWrite     = 1'b0;      //
+                        MemWrite    = 1'b0;      //
+                        PCWrite     = 1'b0;      //
+                        RegWrite    = 1'b0;      //
+                        //To ALU Decoder
+                        ALUOp       = 2'b00;     //
+                    end
+                S4_MEM_WRITE_BACK:
+                    begin
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b1;      //1
+                        RegDst      = 1'b0;      //0
+                        IorD        = 1'b0;      //
+                        PCSrc       = 1'b0;      //
+                        ALUSrcB     = 2'b00;     //
+                        ALUSrcA     = 1'b0;      //
+                        //Register Enables
+                        IRWrite     = 1'b0;      //
+                        MemWrite    = 1'b0;      //
+                        PCWrite     = 1'b0;      //
+                        RegWrite    = 1'b1;      //1
+                        //To ALU Decoder
+                        ALUOp       = 2'b00;     //
+                    end
+                S5_MEM_WRITE:
+                    begin
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b0;      //
+                        RegDst      = 1'b0;      //
+                        IorD        = 1'b1;      //1
+                        PCSrc       = 1'b0;      //
+                        ALUSrcB     = 2'b00;     //
+                        ALUSrcA     = 1'b0;      //
+                        //Register Enables
+                        IRWrite     = 1'b0;      //
+                        MemWrite    = 1'b1;      //1
+                        PCWrite     = 1'b0;      //
+                        RegWrite    = 1'b0;      //
+                        //To ALU Decoder
+                        ALUOp       = 2'b00;     //
+                    end
+                S6_EXECUTE:
+                    begin
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b0;      //
+                        RegDst      = 1'b0;      //
+                        IorD        = 1'b0;      //
+                        PCSrc       = 1'b0;      //
+                        ALUSrcB     = 2'b00;     //00
+                        ALUSrcA     = 1'b1;      //1
+                        //Register Enables
+                        IRWrite     = 1'b0;      //
+                        MemWrite    = 1'b0;      //
+                        PCWrite     = 1'b0;      //
+                        RegWrite    = 1'b0;      //
+                        //To ALU Decoder
+                        ALUOp       = 2'b10;     //10
+                    end
+                S7_ALU_WRITE_BACK:
+                    begin
+                        //Multiplexer Selects
+                        MemtoReg    = 1'b0;      //0
+                        RegDst      = 1'b1;      //1
+                        IorD        = 1'b0;      //
+                        PCSrc       = 1'b0;      //
+                        ALUSrcB     = 2'b00;     //
+                        ALUSrcA     = 1'b0;      //
+                        //Register Enables
+                        IRWrite     = 1'b0;      //
+                        MemWrite    = 1'b0;      //
+                        PCWrite     = 1'b0;      //
+                        RegWrite    = 1'b0;      //
+                        //To ALU Decoder
+                        ALUOp       = 2'b00;     //
+                    end
+        endcase
+    end
+
+// *** ALU Decoder ***
+
+always @(funct) 
+    begin
+        if(rst)
+            ALUControl <= 3'b000;
+        else
+            case (funct)
+                ADD_FN:
+                    ALUFunctions_o <= 3'b010;
+                SUB_FN:
+                    ALUFunctions_o <= 3'b110;
+                AND_FN:
+                    ALUFunctions_o <= 3'b000;
+                OR_FN:
+                    ALUFunctions_o <= 3'b001;
+                SLT_FN:
+                    ALUFunctions_o <= 3'b111;
+                default: 
+                    ALUFunctions_o <= 3'b010;
+            endcase
+    end
+
+always @(ALUOp_w) 
+    begin
+        case (ALUOp_w)
+            2'b00:
+                ALUControl <= 3'b010;
+            2'b01:
+                ALUControl <= 3'b110;
+            2'b10:
+                ALUControl <= ALUFunctions_o;
+            2'b11:
+                ALUControl <= ALUFunctions_o;
+        endcase
+    end
+    
+endmodule
+
+
+
+
+
+
+
+                        // //Multiplexer Selects
+                        // MemtoReg    = 1'b0;      //
+                        // RegDst      = 1'b0;      //
+                        // IorD        = 1'b0;      //
+                        // PCSrc       = 1'b0;      //
+                        // ALUSrcB     = 2'b00;     //
+                        // ALUSrcA     = 1'b0;      //
+                        // //Register Enables
+                        // IRWrite     = 1'b0;      //
+                        // MemWrite    = 1'b0;      //
+                        // PCWrite     = 1'b0;      //
+                        // RegWrite    = 1'b0;      //
+                        // //To ALU Decoder
+                        // ALUOp       = 2'b00;     //

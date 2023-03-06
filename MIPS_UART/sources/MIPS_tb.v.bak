@@ -1,0 +1,14 @@
+module MIPS_tb ();
+wire clk, reset;
+
+initial
+	begin
+		clk = 1'b0;
+	end
+	
+always
+	begin
+	#10 clk = ~clk;
+	end
+	
+endmodule

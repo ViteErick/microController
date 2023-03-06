@@ -1,0 +1,260 @@
+{A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_2in_1out_TB.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_2in_1out_TB.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_2in_1out_TB
+
+Top level modules:
+	Mux_2in_1out_TB
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALU_TB.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALU_TB.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU_TB
+
+Top level modules:
+	ALU_TB
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/programCounter.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/programCounter.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module programCounter
+
+Top level modules:
+	programCounter
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Counter_Param.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Counter_Param.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Counter_Param
+
+Top level modules:
+	Counter_Param
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_TxRx.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_TxRx.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module UART_TxRx
+
+Top level modules:
+	UART_TxRx
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/parity.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/parity.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module parity
+
+Top level modules:
+	parity
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_4in_1out_TB.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_4in_1out_TB.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_4in_1out_TB
+
+Top level modules:
+	Mux_4in_1out_TB
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Heard_Bit.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Heard_Bit.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Heard_Bit
+
+Top level modules:
+	Heard_Bit
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Bit_Rate_Pulse.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Bit_Rate_Pulse.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Bit_Rate_Pulse
+
+Top level modules:
+	Bit_Rate_Pulse
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/deboncer.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/deboncer.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Debouncer
+
+Top level modules:
+	Debouncer
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Shift_Register_R_Param.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Shift_Register_R_Param.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Shift_Register_R_Param
+
+Top level modules:
+	Shift_Register_R_Param
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Shift_Register_R_Param_Rx.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Shift_Register_R_Param_Rx.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Shift_Register_R_Param_Rx
+
+Top level modules:
+	Shift_Register_R_Param_Rx
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_UART.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_UART.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module MIPS_UART
+
+Top level modules:
+	MIPS_UART
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_Rx.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_Rx.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module UART_Rx
+
+Top level modules:
+	UART_Rx
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/RegisterFile.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/RegisterFile.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/register.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/register.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_Tx.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_Tx.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_Tx
+
+Top level modules:
+	Mux_Tx
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Reg_Param.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Reg_Param.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Reg_Param
+
+Top level modules:
+	Reg_Param
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_tb.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_tb.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module MIPS_tb
+
+Top level modules:
+	MIPS_tb
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ascii_2_7_seg.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ascii_2_7_seg.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ascii_2_7_seg
+
+Top level modules:
+	ascii_2_7_seg
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Delayer.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Delayer.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Delayer
+
+Top level modules:
+	Delayer
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_Tx.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_Tx.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module UART_Tx
+
+Top level modules:
+	UART_Tx
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/decoder_bin_hex_7seg.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/decoder_bin_hex_7seg.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module decoder_bin_hex_7seg
+
+Top level modules:
+	decoder_bin_hex_7seg
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/zeroExtend.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/zeroExtend.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module zeroExtend
+
+Top level modules:
+	zeroExtend
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALUDecoder.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALUDecoder.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALUDecoder
+
+Top level modules:
+	ALUDecoder
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/signExtend.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/signExtend.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module signExtend
+
+Top level modules:
+	signExtend
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_UART_TB.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_UART_TB.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module MIPS_UART_TB
+
+Top level modules:
+	MIPS_UART_TB
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module MIPS
+
+Top level modules:
+	MIPS
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/controlUnit.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/controlUnit.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module controlUnit
+
+Top level modules:
+	controlUnit
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_2in_1out.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_2in_1out.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_2in_1out
+
+Top level modules:
+	Mux_2in_1out
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_UART_Rx.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_UART_Rx.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module FSM_UART_Rx
+
+Top level modules:
+	FSM_UART_Rx
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALU.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALU.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_4in_1out.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_4in_1out.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Mux_4in_1out
+
+Top level modules:
+	Mux_4in_1out
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/InstructionData_Memory.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/InstructionData_Memory.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module InstructionData_Memory
+
+Top level modules:
+	InstructionData_Memory
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_UART_Tx.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_UART_Tx.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module FSM_UART_Tx
+
+Top level modules:
+	FSM_UART_Tx
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_Debouncer.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_Debouncer.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module FSM_Debouncer
+
+Top level modules:
+	FSM_Debouncer
+
+} {} {}} {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FF_D_enable.v} {1 {vlog -work work -vopt -stats=none {A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FF_D_enable.v}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module FF_D_enable
+
+Top level modules:
+	FF_D_enable
+
+} {} {}}

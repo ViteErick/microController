@@ -1,0 +1,159 @@
+Archive Project report for MIPS
+Fri Dec  2 10:59:40 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Fri Dec  2 10:59:40 2022 ;
+; Revision Name          ; MIPS                                  ;
+; Top-level Entity Name  ; MIPS_UART                             ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory A:/ITESO/Primer Semestre/Digitales/MIPS_UART/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'A:/ITESO/Primer Semestre/Digitales/MIPS_UART/quartusProject/MIPS_UART.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'MIPS.archive.rpt'
+Info (23030): Evaluation of Tcl script a:/intelfpga_lite/21.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Fri Dec  2 10:59:40 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++----------------------------------------------------------------------------------+
+; Files Archived                                                                   ;
++----------------------------------------------------------------------------------+
+; File Name                                                                        ;
++----------------------------------------------------------------------------------+
+; ../sources/ALU.v                                                                 ;
+; ../sources/ALU_TB.v                                                              ;
+; ../sources/ascii_2_7_seg.v                                                       ;
+; ../sources/Bit_Rate_Pulse.v                                                      ;
+; ../sources/controlUnit.v                                                         ;
+; ../sources/Counter_Param.v                                                       ;
+; ../sources/Data.txt                                                              ;
+; ../sources/decoder_bin_hex_7seg.v                                                ;
+; ../sources/FF_D_enable.v                                                         ;
+; ../sources/FSM_UART_Rx.v                                                         ;
+; ../sources/FSM_UART_Tx.v                                                         ;
+; ../sources/Heard_Bit.v                                                           ;
+; ../sources/Instruction_set.txt                                                   ;
+; ../sources/InstructionData_Memory.v                                              ;
+; ../sources/MIPS.v                                                                ;
+; ../sources/MIPS_tb.v                                                             ;
+; ../sources/MIPS_UART.v                                                           ;
+; ../sources/MIPS_UART_TB.v                                                        ;
+; ../sources/Mux_2in_1out.v                                                        ;
+; ../sources/Mux_2in_1out_TB.v                                                     ;
+; ../sources/Mux_4in_1out.v                                                        ;
+; ../sources/Mux_4in_1out_TB.v                                                     ;
+; ../sources/Mux_Tx.v                                                              ;
+; ../sources/parity.v                                                              ;
+; ../sources/programCounter.v                                                      ;
+; ../sources/Reg_Param.v                                                           ;
+; ../sources/register.v                                                            ;
+; ../sources/RegisterFile.v                                                        ;
+; ../sources/Shift_Register_R_Param.v                                              ;
+; ../sources/Shift_Register_R_Param_Rx.v                                           ;
+; ../sources/signExtend.v                                                          ;
+; ../sources/UART_Rx.v                                                             ;
+; ../sources/UART_Tx.v                                                             ;
+; ../sources/UART_TxRx.v                                                           ;
+; ../sources/zeroExtend.v                                                          ;
+; a:/intelfpga_lite/21.1/quartus/bin64/assignment_defaults.qdf                     ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALU.v                       ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ALU_TB.v                    ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/ascii_2_7_seg.v             ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Bit_Rate_Pulse.v            ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/controlUnit.v               ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Counter_Param.v             ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Data.txt                    ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/decoder_bin_hex_7seg.v      ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FF_D_enable.v               ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_UART_Rx.v               ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/FSM_UART_Tx.v               ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Heard_Bit.v                 ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Instruction_set.txt         ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/InstructionData_Memory.v    ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS.v                      ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_tb.v                   ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_UART.v                 ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/MIPS_UART_TB.v              ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_2in_1out.v              ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_2in_1out_TB.v           ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_4in_1out.v              ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_4in_1out_TB.v           ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Mux_Tx.v                    ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/parity.v                    ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/programCounter.v            ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Reg_Param.v                 ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/register.v                  ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/RegisterFile.v              ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Shift_Register_R_Param.v    ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/Shift_Register_R_Param_Rx.v ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/signExtend.v                ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_Rx.v                   ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_Tx.v                   ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/UART_TxRx.v                 ;
+; A:/ITESO/Primer Semestre/Digitales/MIPS_UART/sources/zeroExtend.v                ;
+; db/stp1_auto_stripped.stp                                                        ;
+; MIPS.qpf                                                                         ;
+; MIPS.qsf                                                                         ;
+; output_files/stp1.stp                                                            ;
+; PLL_100MHz.cmp                                                                   ;
+; PLL_100MHz.qip                                                                   ;
+; PLL_100MHz.sip                                                                   ;
+; PLL_100MHz.spd                                                                   ;
+; PLL_100MHz.v                                                                     ;
+; PLL_100MHz/PLL_100MHz_0002.qip                                                   ;
+; PLL_100MHz/PLL_100MHz_0002.v                                                     ;
+; PLL_100MHz_sim/PLL_100MHz.vo                                                     ;
++----------------------------------------------------------------------------------+
+
+

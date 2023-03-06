@@ -1,0 +1,44 @@
+module MIPS_UART (
+	input clock, reset,
+	//UART_Rx
+	input rx,
+	output parity,
+	output [8:0]Rx_SR,
+	output heard_bit_out,
+	output [6:0] HEX0,
+	output [6:0] HEX2,
+	output [6:0] HEX3,
+	//UART_Tx
+	output tx
+);
+
+MIPS MIPS_UUT(
+    .clk(clock),
+    .rst(reset),
+	 .UART_Done(),
+	 .sendTx()
+    );
+	 
+UART_TxRx UART(
+    .clk(clock),
+    .rst(reset),
+	 .rx(),
+	 .parity(),
+	 .Rx_SR(),
+	 .heard_bit_out(),
+	 .HEX0(),
+	 .HEX2(),
+	 .HEX3(),
+	 .sendTx(),
+	 .sw00(),
+	 .sw01(),
+	 .sw02(),
+	 .sw03(),
+	 .sw04(),
+	 .sw05(),
+	 .sw06(),
+	 .sw07(),
+	 .tx()
+    );
+	 
+endmodule
